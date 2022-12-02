@@ -1,3 +1,6 @@
+package aoc2021
+
+import utils.readInput
 import kotlin.math.max
 
 fun main() {
@@ -13,11 +16,11 @@ fun main() {
     }
 
     // test if implementation meets criteria from the description, like:
-    val testInput = readInput("Day13_test")
+    val testInput = readInput("2021", "Day13_test")
     check(part1(testInput) == 17)
     part2(testInput)
 
-    val input = readInput("Day13")
+    val input = readInput("2021", "Day13")
     println(part1(input))
     println(part2(input))
 }

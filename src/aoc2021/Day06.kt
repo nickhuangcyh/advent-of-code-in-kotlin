@@ -1,3 +1,7 @@
+package aoc2021
+
+import utils.readInput
+
 fun main() {
     fun part1(input: String, days: Int): Long {
         val lanternfishs = input.split(",").map { it.toInt() } as MutableList
@@ -53,11 +57,11 @@ fun main() {
     }
 
     // test if implementation meets criteria from the description, like:
-    val testInput = readInput("Day06_test")
+    val testInput = readInput("2021", "Day06_test")
     check(part1(testInput.first(), 18) == 26L)
     check(part1(testInput.first(), 80) == 5934L)
 
-    val input = readInput("Day06")
+    val input = readInput("2021", "Day06")
     println(part1(input.first(), 80))
     println(part2(input.first(), 256))
 

@@ -1,3 +1,7 @@
+package aoc2021
+
+import utils.readInput
+
 fun main() {
     fun part1(input: List<String>): Int {
         val illegalBracketList = mutableListOf<BracketsType>()
@@ -27,11 +31,11 @@ fun main() {
     }
 
     // test if implementation meets criteria from the description, like:
-    val testInput = readInput("Day10_test")
+    val testInput = readInput("2021", "Day10_test")
     check(part1(testInput) == 26397)
     check(part2(testInput) == 288957L)
 
-    val input = readInput("Day10")
+    val input = readInput("2021", "Day10")
     println(part1(input))
     println(part2(input))
 }

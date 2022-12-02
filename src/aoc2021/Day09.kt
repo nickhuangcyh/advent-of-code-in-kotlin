@@ -1,3 +1,7 @@
+package aoc2021
+
+import utils.readInput
+
 fun main() {
     fun part1(input: List<String>): Int {
         val point2DList: List<List<CavePoint>> = input.mapIndexed { row, pointList ->
@@ -33,11 +37,11 @@ fun main() {
     }
 
     // test if implementation meets criteria from the description, like:
-    val testInput = readInput("Day09_test")
+    val testInput = readInput("2021", "Day09_test")
     check(part1(testInput) == 15)
     check(part2(testInput) == 1134)
 
-    val input = readInput("Day09")
+    val input = readInput("2021", "Day09")
     println(part1(input))
     println(part2(input))
 }
@@ -91,7 +95,7 @@ class Basin(val lowerPoint: CavePoint) {
 }
 
 /*
---- Day 9: Smoke Basin ---
+--- Day 9: Smoke aoc2021.Basin ---
 These caves seem to be lava tubes. Parts are even still volcanically active; small hydrothermal vents release smoke into the caves that slowly settles like rain.
 
 If you can model how the smoke flows through the caves, you might be able to avoid it and be that much safer. The submarine generates a heightmap of the floor of the nearby caves for you (your puzzle input).

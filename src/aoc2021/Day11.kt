@@ -1,3 +1,7 @@
+package aoc2021
+
+import utils.readInput
+
 fun main() {
     fun part1(input: List<String>, steps: Int): Int {
         val (totalFlashesOctopuse, firstStepAllOctopusesFlash) = flashesOctopusesCalculate(input, steps)
@@ -10,11 +14,11 @@ fun main() {
     }
 
     // test if implementation meets criteria from the description, like:
-    val testInput = readInput("Day11_test")
+    val testInput = readInput("2021", "Day11_test")
     check(part1(testInput, 100) == 1656)
     check(part2(testInput, 200) == 195)
 
-    val input = readInput("Day11")
+    val input = readInput("2021", "Day11")
     println(part1(input, 100))
     println(part2(input, 500))
 

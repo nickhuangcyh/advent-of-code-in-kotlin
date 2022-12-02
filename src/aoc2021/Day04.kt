@@ -1,3 +1,7 @@
+package aoc2021
+
+import utils.readInput
+
 fun main() {
     fun part1(drawList: List<Int>, bingoBoardList: List<BingoBoard>): Int {
         var winnersBingoBoard: BingoBoard? = null
@@ -61,12 +65,12 @@ fun main() {
     }
 
     // test if implementation meets criteria from the description, like:
-    val testInput = readInput("Day04_test")
+    val testInput = readInput("2021", "Day04_test")
     val (testDrawList, testBingoBoardList) = getDrawListAndBingoBoards(testInput)
     check(part1(testDrawList, testBingoBoardList) == 4512)
     check(part2(testDrawList, testBingoBoardList) == 1924)
 
-    val input = readInput("Day04")
+    val input = readInput("2021", "Day04")
     val (drawList, bingoBoardList) = getDrawListAndBingoBoards(input)
     println(part1(drawList, bingoBoardList))
     println(part2(drawList, bingoBoardList))

@@ -1,3 +1,7 @@
+package aoc2021
+
+import utils.readInput
+
 fun main() {
     fun part1(input: List<String>): Int {
         var horizontalPosition = 0
@@ -8,6 +12,7 @@ fun main() {
                 is DirectionCommand.Forward -> horizontalPosition += directionCommand.value
                 is DirectionCommand.Down -> depth += directionCommand.value
                 is DirectionCommand.Up -> depth -= directionCommand.value
+                else -> {}
             }
         }
 
@@ -27,6 +32,7 @@ fun main() {
                 }
                 is DirectionCommand.Down -> aim += directionCommand.value
                 is DirectionCommand.Up -> aim -= directionCommand.value
+                else -> {}
             }
         }
 
@@ -34,11 +40,11 @@ fun main() {
     }
 
     // test if implementation meets criteria from the description, like:
-    val testInput = readInput("Day02_test")
+    val testInput = readInput("2021", "Day02_test")
     check(part1(testInput) == 150)
     check(part2(testInput) == 900)
 
-    val input = readInput("Day02")
+    val input = readInput("2021", "Day02")
     println(part1(input))
     println(part2(input))
 }

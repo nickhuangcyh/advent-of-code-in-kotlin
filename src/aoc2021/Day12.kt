@@ -1,3 +1,7 @@
+package aoc2021
+
+import utils.readInput
+
 fun main() {
     fun part1(input: List<String>): Int {
         return findAllPathsOfCaveMap(input, Cave.VisitLimitation.VISIT_SMALL_CAVE_AT_MOST_ONCE)
@@ -8,19 +12,19 @@ fun main() {
     }
 
     // test if implementation meets criteria from the description, like:
-    val testInput = readInput("Day12_test")
+    val testInput = readInput("2021", "Day12_test")
     check(part1(testInput) == 10)
     check(part2(testInput) == 36)
 
-    val test1Input = readInput("Day12_test1")
+    val test1Input = readInput("2021", "Day12_test1")
     check(part1(test1Input) == 19)
     check(part2(test1Input) == 103)
 
-    val test2Input = readInput("Day12_test2")
+    val test2Input = readInput("2021", "Day12_test2")
     check(part1(test2Input) == 226)
     check(part2(test2Input) == 3509)
 
-    val input = readInput("Day12")
+    val input = readInput("2021", "Day12")
     println(part1(input))
     println(part2(input))
 }
