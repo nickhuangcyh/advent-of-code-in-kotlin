@@ -65,6 +65,7 @@ fun main() {
     // test if implementation meets criteria from the description, like:
     val testInput = readInput("2022", "Day04_test")
     check(part1(testInput) == 2)
+    check(part2(testInput) == 4)
 
     val input = readInput("2022", "Day04")
     println(part1(input))
